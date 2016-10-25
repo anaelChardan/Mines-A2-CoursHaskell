@@ -227,10 +227,30 @@ test5 = solutions5 [1,3,7,10,25,50] 765
 test6 = solutions5 [1,3,7,10,25,50] 831
 
 -- VI) affichez les expressions sous forme infixe en evitant des parentheses inutiles
-instance Show Exp' where
-    show :: Exp' -> String
-    show e = undefined
+--instance Show Exp' where
+--    show :: Exp' -> String
+--    show e = undefined
 
 -- VII) generalisez certaines fonctions avec de l'ordre superieur afin de reduire la duplication de code dans ce programme
 
 -- misc : cherchez les solutions avec le moins d'operations en priorite
+
+test7 = listToBinTree "abcde"
+test8 = fst (numberLeaves 0 test7)
+
+
+------ TP Additionnel
+
+data BinTree a = Node (BinTree a) (BinTree a) | Leaf a deriving Show
+
+listToBinTree :: [a] -> BinTree a
+listToBinTree [a] = Leaf a
+listToBinTree as = let (ls, rs) = splitAt (length as `div` 2) as in Node(listToBinTree ls) (listToBinTree rs)
+
+numberLeaves :: Int -> BinTree a -> (BinTree (a, Int), Int)
+numberLeaves n (Leaf i) = (Leaf (i, n), n+1)
+numberLeaves n (Node b1 b2) =
+    let
+        (left, n1) = (numberLeaves n b1)
+        (right, n2) = (numberLeaves n1 b2)
+    in (Node left right, n2)
