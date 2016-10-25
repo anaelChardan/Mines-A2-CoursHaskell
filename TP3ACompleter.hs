@@ -31,15 +31,19 @@ myQSort []     = []
 -- sous liste 
 
 -- deja vu au bloc 2
+
+-- PERMET DE DECOUPER EN SOUS LISTES AVEC TOUS LES ELEMENTS
 sousListes :: [a] -> [[a]]
 sousListes []     = [[]]
 sousListes (x:xs) = ys ++ map (x:) ys
     where ys = sousListes xs
 
+-- PERMET D'AJOUTER L'ELEMENET A TOUT LES POSITION
 injections :: a -> [a] -> [[a]]
 injections x (y:ys) = (x:y:ys) : map (y:) (injections x ys)
 injections x []     = [[x]]
-                      
+
+-- PERMET DE FAIRE TOUTES LES PERMUTATION DUNE LISTE
 permuts :: [a] -> [[a]]
 permuts (x:xs) = concat (map (injections x) (permuts xs))
 permuts []     = [[]]
@@ -110,12 +114,26 @@ test1 = solutions [1,3,7,10,25,50] 765
 -- II) fusionner la generation et le filtrage des expressions invalides
 
 exps2 :: [Int] -> [Exp]
-exps2 = undefined
+exps2 [n] = [Val n]
+exps2 ns =
+    [ App o g d
+      | (gs,ds) <- partitionStricte ns
+    , g <- exps2 gs
+    , d <- exps2 ds
+    , o <- [Add,Sub,Mul,Div]
+    , validOp o (evalExp g) (evalExp d)
+    ]
 
 solutions2 :: [Int] -> Int -> [Exp]
-solutions2 nombres cible = undefined
-
+solutions2 nombres cible =
+    let ns = permSousListes nombres
+        es = concat (map exps2 ns)
+        es'' = filter (\e -> evalExp e == cible) es
+    in es''
 test2 = solutions2 [1,3,7,10,25,50] 765
+
+-- TEST1 : TIME 197'06
+-- TEST2 : TIME 35'78
 
 
 -- III) memoiser l'evaluation
@@ -128,13 +146,28 @@ evalExp' (Val' n) = n
 evalExp' (App' _ _ _ n) = n
 
 exps3 :: [Int] -> [Exp']
-exps3 = undefined
+exps3 [n] = [Val' n]
+exps3 ns =
+    [ App' o g d n
+      | (gs,ds) <- partitionStricte ns
+    , g <- exps3 gs
+    , d <- exps3 ds
+    , o <- [Add,Sub,Mul,Div]
+    , let valG = evalExp' g
+    , let valD = evalExp' d
+    , let n = evalOp o valG valD
+    , validOp o (evalExp' g) (evalExp' d)
+    ]
 
 solutions3 :: [Int] -> Int -> [Exp']
-solutions3 nombres cible = undefined
-
+solutions3 nombres cible =
+    let ns = permSousListes nombres
+        es = concat (map exps3 ns)
+        es'' = filter (\e -> evalExp' e == cible) es
+    in es''
 test3 = solutions3 [1,3,7,10,25,50] 765
 
+-- test3 = TIME 18'67
 
 -- IV) exploiter des proprietes arithmetiques
 
