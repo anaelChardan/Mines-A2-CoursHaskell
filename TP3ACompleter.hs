@@ -156,7 +156,7 @@ exps3 ns =
     , let valG = evalExp' g
     , let valD = evalExp' d
     , let n = evalOp o valG valD
-    , validOp o (evalExp' g) (evalExp' d)
+    , validOp o valG valD
     ]
 
 solutions3 :: [Int] -> Int -> [Exp']
@@ -176,33 +176,60 @@ test3 = solutions3 [1,3,7,10,25,50] 765
 -- - pas de division par 1
 -- - addition et multiplication commutatives (ne considerer qu'un sens (quand les deux operandes sont differents))
 validOp' :: Op -> Int -> Int -> Bool
-validOp' o x y = undefined
+validOp' Add x y = x>=y
+validOp' Sub x y = x>y
+validOp' Mul x 1 = False
+validOp' Mul 1 x = False
+validOp' Mul x y = x>=y
+validOp' Div x 1 = False
+validOp' Div x y = x `mod` y == 0
 
 exps4 :: [Int] -> [Exp']
-exps4 = undefined
+exps4 [n] = [Val' n]
+exps4 ns =
+    [ App' o g d n
+      | (gs,ds) <- partitionStricte ns
+    , g <- exps4 gs
+    , d <- exps4 ds
+    , o <- [Add,Sub,Mul,Div]
+    , let valG = evalExp' g
+    , let valD = evalExp' d
+    , let n = evalOp o valG valD
+    , validOp' o valG valD
+    ]
 
 solutions4 :: [Int] -> Int -> [Exp']
-solutions4 nombres cible = undefined
+solutions4 nombres cible =
+   let ns = permSousListes nombres
+       es = concat (map exps4 ns)
+       es'' = filter (\e -> evalExp' e == cible) es
+   in es''
 
 test4 = solutions4 [1,3,7,10,25,50] 765
 
 -- nombre de solutions
 
 nombreDeSolutions3 = length test3
-nombreDeSolutions4 = length test4
+nombreDeSolutions4 = length test4 -- 49 + 2sec
 
--- V) ne retourner qu'une solution exacte ou bien la plus proche 
+-- V) ne retourner qu'une solution exacte ou bien la plus proche
 
-solutions5 :: [Int] -> Int -> [Exp']
-solutions5 nombres cible = undefined
+solutions5 :: [Int] -> Int -> [(Exp', Int)]
+solutions5 nombres cible =
+   let ns = permSousListes nombres
+       es = concat (map exps4 ns)
+       es' = sortBy (\x y -> compare (abs(evalExp' x - cible)) (abs(evalExp' y - cible))) es
+--       es' = sortOn (\e -> abs (cible - evalExp' e)) es
+       res = map (\e -> (e, evalExp' e)) es'
+   in res
 
 test5 = solutions5 [1,3,7,10,25,50] 765
 test6 = solutions5 [1,3,7,10,25,50] 831
 
 -- VI) affichez les expressions sous forme infixe en evitant des parentheses inutiles
---instance Show Exp' where 
---    show :: Exp' -> String
---    show e = undefined
+instance Show Exp' where
+    show :: Exp' -> String
+    show e = undefined
 
 -- VII) generalisez certaines fonctions avec de l'ordre superieur afin de reduire la duplication de code dans ce programme
 
