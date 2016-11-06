@@ -40,7 +40,7 @@ myGet :: State s s
 myGet = State (\s -> (s,s))
 
 myPut :: s -> State s ()
-myPut sNew = State (\sOld -> (sNew,()))
+myPut sNew = State (const (sNew, ()))
 
 myThen :: State s a -> (a -> State s b) -> State s b
 myThen (State m) f = State (\s1 -> let (s2,x) = m s1
