@@ -103,6 +103,7 @@ test' = buildHuff exemple1 == Node (Leaf 'a') (Node (Leaf 'b') (Leaf 'c'))
 
 buildHuff :: String -> Huff Char
 buildHuff = strip . agrege . feuilles
+-- buildHuff cs = strip(agrege(feuilles cs))
 
 
 -- codage d'une chaine
@@ -113,7 +114,7 @@ test'' :: Bool
 test'' = codeOne (Node (Leaf 'a') (Node (Leaf 'b') (Leaf 'c'))) 'b' == [R,L]
 
 codeOne :: Huff Char -> Char -> Bits
-codeOne = undefined
+codeOne root c = head (codeOne' root c)
 
 -- Q8 [def recursive qui utilise aussi map]
 -- code un caractere, retourne une liste de longueur 1 qui contient le chemin du caractere
@@ -123,7 +124,9 @@ testQ8 :: Bool
 testQ8 = codeOne' (Node (Leaf 'a') (Node (Leaf 'b') (Leaf 'c'))) 'b' == [[R,L]]
 
 codeOne' :: Huff Char -> Char -> [Bits]
-codeOne' = undefined
+codeOne' (Leaf a) c | a == c = [[]]
+                    | otherwise = []
+codeOne' (Node a b) c = map (L:) (codeOne' a c) ++ map(R:) (codeOne' b c)
 
 -- code tous les caracteres d'une chaine
 
@@ -131,8 +134,7 @@ test''' :: Bool
 test''' = codeAll (Node (Leaf 'a') (Node (Leaf 'b') (Leaf 'c'))) exemple1 == [L,R,L,R,R,R,L,R,R,L,L]
 
 codeAll :: Huff Char -> String -> Bits
-codeAll = undefined
-
+codeAll root = concatMap (codeOne root)
 
 -- Q9 [rec def]
 -- decodage d'une liste de bits
@@ -141,7 +143,10 @@ testQ9 :: Bool
 testQ9 = decode (Node (Leaf 'a') (Node (Leaf 'b') (Leaf 'c'))) (Node (Leaf 'a') (Node (Leaf 'b') (Leaf 'c'))) [L,R,L,R,R,R,L,R,R,L,L] == "abcbcaa"
 
 decode :: Huff Char -> Huff Char -> Bits -> String
-decode = undefined
+decode (Leaf a)   n2 b  = a:(decode n2 n2 b)
+decode (Node a b) n2 (c:bs)  | c == L    = decode a n2 bs
+                             | otherwise = decode b n2 bs
+decode     _      _  [] = []
 
 -- verifie la correction en codange puis decodant et calcule le ratio de compression (hors arbre)
 
@@ -158,5 +163,5 @@ test10 s =
 -- Q10
 -- en 10 mots maximum identifier ce qui est recalcule de nombreuses fois et pourrait etre optimise dans ce code
 
--- reponse :
+-- reponse : On devrait enregistrer les cheemins correspondantt aux lettre
 

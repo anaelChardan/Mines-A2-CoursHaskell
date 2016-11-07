@@ -169,5 +169,5 @@ test10 s =
 -- Q10 
 -- en 10 mots maximum identifier ce qui est recalcule de nombreuses fois et pourrait etre optimise dans ce code
 
--- reponse : 
+-- reponse : en regardant très fort
 
