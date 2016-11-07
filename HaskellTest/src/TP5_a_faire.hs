@@ -87,9 +87,9 @@ testIsSplitableMap2 :: Bool
 testIsSplitableMap2 = not (isSplitableMap [(France, [Blue]), (Belgium, [Blue]), (Italy, [Green])])
 
 isSplitableMap :: Map -> Bool
-isSplitableMap m = any (\x -> isSplitableColors (snd x)) m
--- isSplitableMap = any (isSplitableColors . snd)
+isSplitableMap = any (isSplitableColors . snd)
 
+-- isSplitableMap = any (isSplitableColors . snd)
 -- Q2) [non rec def] to split a map split the first splitable list of colors
 testSplitMap :: Bool
 testSplitMap =
@@ -98,11 +98,11 @@ testSplitMap =
   , [(France, [Blue]), (Belgium, [Red, Yellow]), (Italy, [Red, Green])])
 
 splitMap :: Map -> (Map, Map)
-splitMap m = (unsplitable ++ [(country, colour)] ++ rest, unsplitable ++ [(country, coulours)] ++ rest)
+splitMap countryAndColors = (unsplitable ++ [(state, splitHead)] ++ ts, unsplitable ++ [(state, splitTail)] ++ ts)
   where
-    unsplitable = takeWhile (not . isSplitableColors . snd) m
-    (country, countryColors):rest = dropWhile (not . isSplitableColors . snd) m
-    (colour, coulours) = splitColors countryColors
+    unsplitable            = takeWhile (not . isSplitableColors . snd) countryAndColors
+    ((state, colours):ts)  = dropWhile (not . isSplitableColors . snd) countryAndColors
+    (splitHead, splitTail) = splitColors colours
 
 -- Q3) [rec def] generate all (unsplitable) maps
 testGenerate :: Bool
@@ -115,20 +115,16 @@ testGenerate =
   ]
 
 generateMap :: Map -> [Map]
-generateMap x | isSplitableMap x =
-                  let
-                      (m1,m2) = splitMap x
-                      rep     = generateMap m1 ++ generateMap m2
-                  in rep
-              | otherwise        = [x]
+generateMap m | isSplitableMap m = generateMap (fst (splitMap m)) ++ generateMap (snd (splitMap m))
+              | otherwise = [m]
+
 -- test map
 -- Q4) [non rec def] return the list of colors of a country in a map
 testReadCountry :: Bool
-testReadCountry =
-  readCountry France [(Belgium, [Red]), (France, [Blue, Yellow]), (WestGermany, [Yellow, Green])] == [Blue, Yellow]
+testReadCountry = readCountry France [(Belgium, [Red]), (France, [Blue, Yellow]), (WestGermany, [Yellow, Green])] == [Blue, Yellow]
 
 readCountry :: Country -> Map -> [Color]
-readCountry = undefined
+readCountry p m = snd (head (filter (\x -> p == fst x) m))
 
 -- Q5) [non rec def] test if two countries that share a border have different colors (lists of colors have size 1)
 testIsDifferentColor1 :: Bool
@@ -138,10 +134,12 @@ testIsDifferentColor2 :: Bool
 testIsDifferentColor2 = not (isDifferentColor [(Italy, [Red]), (France, [Red]), (Belgium, [Blue])] (France, Italy))
 
 isDifferentColor :: Map -> Border -> Bool
-isDifferentColor = undefined
+isDifferentColor m (p1, p2) = getColors p1 m /= getColors p2 m
+    where getColors:: Country -> Map -> [Color]
+          getColors p d = snd (head (filter (\x -> fst x == p) d))
 
 isValidMap :: [Border] -> Map -> Bool
-isValidMap = undefined
+isValidMap bs m = not (any (not . isDifferentColor m) bs)
 
 -- bruteForce (generate then test)
 -- Q6) [ZF def] select only the borders corresponding to the list of countries
@@ -149,7 +147,7 @@ testFilterBorders :: Bool
 testFilterBorders = filterBorders [France, Belgium, Netherlands] borders == [(Belgium, France), (Belgium, Netherlands)]
 
 filterBorders :: [Country] -> [Border] -> [Border]
-filterBorders = undefined
+filterBorders cs bs = [c | c1 <- cs, c2 <- cs, let c = (c1,c2), c `elem` bs]
 
 brute :: [Country] -> [Map]
 brute cs = filter (isValidMap (filterBorders cs borders)) (generateMap (mkInitMap cs))
@@ -178,7 +176,10 @@ testWriteCountry =
   [(Belgium, [Red]), (France, [Blue, Red]), (Italy, [Red])]
 
 writeCountry :: Country -> [Color] -> Map -> Map
-writeCountry = undefined
+writeCountry c colors ((country, countryColors):xs) | c == country = (c, colors):(writeCountry c colors xs)
+                                                    | otherwise = (country,countryColors):(writeCountry c colors xs)
+writeCountry c colors [] = []
+
 
 -- constraint propagation (global arc consistency filtering) keep only colors of country1 that satisfy p with a color of country2
 filteringBorder :: Border -> Map -> Map
