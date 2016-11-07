@@ -1,0 +1,34 @@
+Configuring hspec-discover-2.2.4...
+Building hspec-discover-2.2.4...
+Preprocessing library hspec-discover-2.2.4...
+[1 of 2] Compiling Test.Hspec.Discover.Config ( src/Test/Hspec/Discover/Config.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Discover/Config.o )
+[2 of 2] Compiling Test.Hspec.Discover.Run ( src/Test/Hspec/Discover/Run.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Discover/Run.o )
+Preprocessing executable 'hspec-discover' for hspec-discover-2.2.4...
+[1 of 1] Compiling Main             ( driver/hspec-discover.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/hspec-discover/hspec-discover-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/hspec-discover/hspec-discover ...
+Running Haddock for hspec-discover-2.2.4...
+Preprocessing library hspec-discover-2.2.4...
+Haddock coverage:
+  20% (  1 /  5) in 'Test.Hspec.Discover.Config'
+  Missing documentation for:
+    Config (src/Test/Hspec/Discover/Config.hs:14)
+    defaultConfig (src/Test/Hspec/Discover/Config.hs:21)
+    parseConfig (src/Test/Hspec/Discover/Config.hs:35)
+    usage (src/Test/Hspec/Discover/Config.hs:32)
+  40% (  4 / 10) in 'Test.Hspec.Discover.Run'
+  Missing documentation for:
+    run (src/Test/Hspec/Discover/Run.hs:42)
+    Spec (src/Test/Hspec/Discover/Run.hs:37)
+    fileToSpec (src/Test/Hspec/Discover/Run.hs:124)
+    findSpecs (src/Test/Hspec/Discover/Run.hs:119)
+    getFilesRecursive (src/Test/Hspec/Discover/Run.hs:143)
+    driverWithFormatter (src/Test/Hspec/Discover/Run.hs:88)
+Documentation created:
+.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/doc/html/hspec-discover/index.html,
+.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/doc/html/hspec-discover/hspec-discover.txt
+Preprocessing executable 'hspec-discover' for hspec-discover-2.2.4...
+Installing library in
+/Users/Ananas/.stack/snapshots/x86_64-osx/lts-7.8/8.0.1/lib/x86_64-osx-ghc-8.0.1/hspec-discover-2.2.4-6OsWF6p1kycGNLQpxduJUs
+Installing executable(s) in
+/Users/Ananas/.stack/snapshots/x86_64-osx/lts-7.8/8.0.1/bin
+Registering hspec-discover-2.2.4...

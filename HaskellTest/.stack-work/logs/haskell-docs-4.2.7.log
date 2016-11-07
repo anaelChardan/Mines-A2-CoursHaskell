@@ -1,0 +1,19 @@
+Configuring haskell-docs-4.2.7...
+Building haskell-docs-4.2.7...
+Preprocessing library haskell-docs-4.2.7...
+[1 of 8] Compiling Haskell.Docs.HaddockDoc ( src/haddock-api/Haskell/Docs/HaddockDoc.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haskell/Docs/HaddockDoc.o )
+[2 of 8] Compiling Haskell.Docs.Types ( src/Haskell/Docs/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haskell/Docs/Types.o )
+[3 of 8] Compiling Haskell.Docs.Ghc ( src/Haskell/Docs/Ghc.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haskell/Docs/Ghc.o )
+[4 of 8] Compiling Haskell.Docs.Formatting ( src/Haskell/Docs/Formatting.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haskell/Docs/Formatting.o )
+[5 of 8] Compiling Haskell.Docs.Cabal ( src/Haskell/Docs/Cabal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haskell/Docs/Cabal.o )
+[6 of 8] Compiling Haskell.Docs.Haddock ( src/Haskell/Docs/Haddock.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haskell/Docs/Haddock.o )
+[7 of 8] Compiling Haskell.Docs.Index ( src/Haskell/Docs/Index.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haskell/Docs/Index.o )
+[8 of 8] Compiling Haskell.Docs     ( src/Haskell/Docs.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haskell/Docs.o )
+Preprocessing executable 'haskell-docs' for haskell-docs-4.2.7...
+[1 of 1] Compiling Main             ( src/main/Main.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/haskell-docs/haskell-docs-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/haskell-docs/haskell-docs ...
+Installing library in
+/Users/Ananas/Documents/SitesPHP/HaskellTest/.stack-work/install/x86_64-osx/lts-7.8/8.0.1/lib/x86_64-osx-ghc-8.0.1/haskell-docs-4.2.7-FBkknIoxOt6DZiX8dYy3nf
+Installing executable(s) in
+/Users/Ananas/Documents/SitesPHP/HaskellTest/.stack-work/install/x86_64-osx/lts-7.8/8.0.1/bin
+Registering haskell-docs-4.2.7...

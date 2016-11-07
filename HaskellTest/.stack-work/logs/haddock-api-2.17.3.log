@@ -1,0 +1,68 @@
+Configuring haddock-api-2.17.3...
+Building haddock-api-2.17.3...
+Preprocessing library haddock-api-2.17.3...
+[ 1 of 38] Compiling Haddock.Backends.HaddockDB ( src/Haddock/Backends/HaddockDB.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/HaddockDB.o )
+[ 2 of 38] Compiling Haddock.Backends.Xhtml.Types ( src/Haddock/Backends/Xhtml/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Xhtml/Types.o )
+[ 3 of 38] Compiling Haddock.Syb      ( src/Haddock/Syb.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Syb.o )
+[ 4 of 38] Compiling Haddock.Backends.Hyperlinker.Types ( src/Haddock/Backends/Hyperlinker/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Hyperlinker/Types.o )
+[ 5 of 38] Compiling Haddock.Backends.Hyperlinker.Ast ( src/Haddock/Backends/Hyperlinker/Ast.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Hyperlinker/Ast.o )
+[ 6 of 38] Compiling Haddock.Backends.Hyperlinker.Parser ( src/Haddock/Backends/Hyperlinker/Parser.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Hyperlinker/Parser.o )
+[ 7 of 38] Compiling Haddock.GhcUtils ( src/Haddock/GhcUtils.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/GhcUtils.o )
+
+src/Haddock/GhcUtils.hs:20:1: warning: [-Wunused-imports]
+    The import of ‘Data.Function’ is redundant
+      except perhaps to import instances from ‘Data.Function’
+    To import instances alone, use: import Data.Function()
+
+src/Haddock/GhcUtils.hs:27:1: warning: [-Wunused-imports]
+    The import of ‘RdrName’ is redundant
+      except perhaps to import instances from ‘RdrName’
+    To import instances alone, use: import RdrName()
+
+src/Haddock/GhcUtils.hs:28:1: warning: [-Wunused-imports]
+    The import of ‘GhcMonad’ is redundant
+      except perhaps to import instances from ‘GhcMonad’
+    To import instances alone, use: import GhcMonad()
+
+src/Haddock/GhcUtils.hs:30:1: warning: [-Wunused-imports]
+    The import of ‘UniqFM’ is redundant
+      except perhaps to import instances from ‘UniqFM’
+    To import instances alone, use: import UniqFM()
+[ 8 of 38] Compiling Haddock.Parser   ( src/Haddock/Parser.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Parser.o )
+[ 9 of 38] Compiling Paths_haddock_api ( .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_haddock_api.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Paths_haddock_api.o )
+[10 of 38] Compiling Haddock.Version  ( src/Haddock/Version.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Version.o )
+[11 of 38] Compiling Haddock.Types    ( src/Haddock/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Types.o )
+[12 of 38] Compiling Haddock.Utils    ( src/Haddock/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Utils.o )
+[13 of 38] Compiling Haddock.Options  ( src/Haddock/Options.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Options.o )
+[14 of 38] Compiling Haddock.Backends.Xhtml.Themes ( src/Haddock/Backends/Xhtml/Themes.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Xhtml/Themes.o )
+[15 of 38] Compiling Haddock.Backends.Xhtml.Utils ( src/Haddock/Backends/Xhtml/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Xhtml/Utils.o )
+[16 of 38] Compiling Haddock.Backends.Hyperlinker.Utils ( src/Haddock/Backends/Hyperlinker/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Hyperlinker/Utils.o )
+[17 of 38] Compiling Haddock.Backends.Hyperlinker.Renderer ( src/Haddock/Backends/Hyperlinker/Renderer.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Hyperlinker/Renderer.o )
+[18 of 38] Compiling Haddock.Backends.Hoogle ( src/Haddock/Backends/Hoogle.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Hoogle.o )
+[19 of 38] Compiling Haddock.Backends.Hyperlinker ( src/Haddock/Backends/Hyperlinker.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Hyperlinker.o )
+[20 of 38] Compiling Haddock.Interface.Rename ( src/Haddock/Interface/Rename.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Interface/Rename.o )
+[21 of 38] Compiling Haddock.Interface.ParseModuleHeader ( src/Haddock/Interface/ParseModuleHeader.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Interface/ParseModuleHeader.o )
+[22 of 38] Compiling Haddock.Interface.LexParseRn ( src/Haddock/Interface/LexParseRn.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Interface/LexParseRn.o )
+[23 of 38] Compiling Haddock.Interface.Specialize ( src/Haddock/Interface/Specialize.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Interface/Specialize.o )
+[24 of 38] Compiling Haddock.Convert  ( src/Haddock/Convert.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Convert.o )
+[25 of 38] Compiling Haddock.Interface.Create ( src/Haddock/Interface/Create.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Interface/Create.o )
+[26 of 38] Compiling Haddock.Interface.AttachInstances ( src/Haddock/Interface/AttachInstances.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Interface/AttachInstances.o )
+[27 of 38] Compiling Haddock.Backends.Xhtml.Names ( src/Haddock/Backends/Xhtml/Names.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Xhtml/Names.o )
+[28 of 38] Compiling Haddock.ModuleTree ( src/Haddock/ModuleTree.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/ModuleTree.o )
+[29 of 38] Compiling Haddock.Doc      ( src/Haddock/Doc.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Doc.o )
+[30 of 38] Compiling Haddock.Backends.LaTeX ( src/Haddock/Backends/LaTeX.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/LaTeX.o )
+[31 of 38] Compiling Haddock.Backends.Xhtml.DocMarkup ( src/Haddock/Backends/Xhtml/DocMarkup.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Xhtml/DocMarkup.o )
+[32 of 38] Compiling Haddock.Backends.Xhtml.Layout ( src/Haddock/Backends/Xhtml/Layout.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Xhtml/Layout.o )
+[33 of 38] Compiling Haddock.Backends.Xhtml.Decl ( src/Haddock/Backends/Xhtml/Decl.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Xhtml/Decl.o )
+[34 of 38] Compiling Haddock.Backends.Xhtml ( src/Haddock/Backends/Xhtml.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Backends/Xhtml.o )
+[35 of 38] Compiling Haddock.InterfaceFile ( src/Haddock/InterfaceFile.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/InterfaceFile.o )
+[36 of 38] Compiling Haddock.Interface ( src/Haddock/Interface.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock/Interface.o )
+[37 of 38] Compiling Haddock          ( src/Haddock.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Haddock.o )
+
+src/Haddock.hs:402:3: warning: [-Wdeprecations]
+    In the use of ‘defaultCleanupHandler’ (imported from GHC):
+    Deprecated: "Cleanup is now done by runGhc/runGhcT"
+[38 of 38] Compiling Documentation.Haddock ( src/Documentation/Haddock.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Documentation/Haddock.o )
+Installing library in
+/Users/Ananas/.stack/snapshots/x86_64-osx/lts-7.8/8.0.1/lib/x86_64-osx-ghc-8.0.1/haddock-api-2.17.3-4wvfjRV8101K9tuVmESrkE
+Registering haddock-api-2.17.3...

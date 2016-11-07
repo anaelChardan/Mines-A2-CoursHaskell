@@ -1,0 +1,14 @@
+Configuring intero-0.1.19...
+Building intero-0.1.19...
+Preprocessing executable 'intero' for intero-0.1.19...
+[1 of 8] Compiling GhciTypes        ( src/GhciTypes.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/intero/intero-tmp/GhciTypes.o )
+[2 of 8] Compiling GhciMonad        ( src/GhciMonad.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/intero/intero-tmp/GhciMonad.o )
+[3 of 8] Compiling GhciTags         ( src/GhciTags.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/intero/intero-tmp/GhciTags.o )
+[4 of 8] Compiling GhciInfo         ( src/GhciInfo.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/intero/intero-tmp/GhciInfo.o )
+[5 of 8] Compiling GhciFind         ( src/GhciFind.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/intero/intero-tmp/GhciFind.o )
+[6 of 8] Compiling Paths_intero     ( .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_intero.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/intero/intero-tmp/Paths_intero.o )
+[7 of 8] Compiling InteractiveUI    ( src/InteractiveUI.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/intero/intero-tmp/InteractiveUI.o )
+[8 of 8] Compiling Main             ( src/Main.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/intero/intero-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/intero/intero ...
+Installing executable(s) in
+/Users/Ananas/.stack/snapshots/x86_64-osx/lts-7.8/8.0.1/bin

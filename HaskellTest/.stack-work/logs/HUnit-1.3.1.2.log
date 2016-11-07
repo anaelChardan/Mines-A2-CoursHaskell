@@ -1,0 +1,29 @@
+Configuring HUnit-1.3.1.2...
+Building HUnit-1.3.1.2...
+Preprocessing library HUnit-1.3.1.2...
+[1 of 5] Compiling Test.HUnit.Terminal ( Test/HUnit/Terminal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/HUnit/Terminal.o )
+[2 of 5] Compiling Test.HUnit.Lang  ( Test/HUnit/Lang.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/HUnit/Lang.o )
+[3 of 5] Compiling Test.HUnit.Base  ( Test/HUnit/Base.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/HUnit/Base.o )
+[4 of 5] Compiling Test.HUnit.Text  ( Test/HUnit/Text.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/HUnit/Text.o )
+[5 of 5] Compiling Test.HUnit       ( Test/HUnit.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/HUnit.o )
+Running Haddock for HUnit-1.3.1.2...
+Preprocessing library HUnit-1.3.1.2...
+Haddock coverage:
+ 100% (  2 /  2) in 'Test.HUnit.Terminal'
+  56% (  5 /  9) in 'Test.HUnit.Lang'
+  Missing documentation for:
+    Module header
+    Location (Test/HUnit/Lang.hs:40)
+    Result (Test/HUnit/Lang.hs:76)
+    HUnitFailure (Test/HUnit/Lang.hs:46)
+  97% ( 33 / 34) in 'Test.HUnit.Base'
+  Missing documentation for:
+    Location (Test/HUnit/Lang.hs:40)
+ 100% (  8 /  8) in 'Test.HUnit.Text'
+ 100% (  3 /  3) in 'Test.HUnit'
+Documentation created:
+.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/doc/html/HUnit/index.html,
+.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/doc/html/HUnit/HUnit.txt
+Installing library in
+/Users/Ananas/.stack/snapshots/x86_64-osx/lts-7.8/8.0.1/lib/x86_64-osx-ghc-8.0.1/HUnit-1.3.1.2-LggooYwT1UPHSoNYWvAdgk
+Registering HUnit-1.3.1.2...

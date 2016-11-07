@@ -1,0 +1,45 @@
+Configuring hspec-expectations-0.7.2...
+Building hspec-expectations-0.7.2...
+Preprocessing library hspec-expectations-0.7.2...
+[1 of 3] Compiling Test.Hspec.Expectations.Contrib ( src/Test/Hspec/Expectations/Contrib.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Expectations/Contrib.o )
+[2 of 3] Compiling Test.Hspec.Expectations.Matcher ( src/Test/Hspec/Expectations/Matcher.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Expectations/Matcher.o )
+[3 of 3] Compiling Test.Hspec.Expectations ( src/Test/Hspec/Expectations.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Expectations.o )
+
+src/Test/Hspec/Expectations.hs:95:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Eq a
+    • In the type signature for:
+           compareWith :: (?loc::CallStack, Show a, Eq a) =>
+                          (a -> a -> Bool) -> String -> a -> a -> Expectation
+
+src/Test/Hspec/Expectations.hs:186:1: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘errorCall’: Patterns not matched: _ _
+Running Haddock for hspec-expectations-0.7.2...
+Preprocessing library hspec-expectations-0.7.2...
+
+src/Test/Hspec/Expectations.hs:95:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Eq a
+    • In the type signature for:
+           compareWith :: (?loc::CallStack, Show a, Eq a) =>
+                          (a -> a -> Bool) -> String -> a -> a -> Expectation
+Haddock coverage:
+ 100% (  5 /  5) in 'Test.Hspec.Expectations.Contrib'
+   0% (  0 /  2) in 'Test.Hspec.Expectations.Matcher'
+  Missing documentation for:
+    Module header
+    matchList (src/Test/Hspec/Expectations/Matcher.hs:6)
+  75% ( 21 / 28) in 'Test.Hspec.Expectations'
+  Missing documentation for:
+    Expectation (src/Test/Hspec/Expectations.hs:73)
+    expectationFailure (src/Test/Hspec/Expectations.hs:75)
+    anyException (src/Test/Hspec/Expectations.hs:179)
+    anyErrorCall (src/Test/Hspec/Expectations.hs:182)
+    anyIOException (src/Test/Hspec/Expectations.hs:188)
+    anyArithException (src/Test/Hspec/Expectations.hs:191)
+    errorCall (src/Test/Hspec/Expectations.hs:185)
+Documentation created:
+.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/doc/html/hspec-expectations/index.html,
+.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/doc/html/hspec-expectations/hspec-expectations.txt
+Installing library in
+/Users/Ananas/.stack/snapshots/x86_64-osx/lts-7.8/8.0.1/lib/x86_64-osx-ghc-8.0.1/hspec-expectations-0.7.2-2hcUzmYSxY99w7X9aRVhtQ
+Registering hspec-expectations-0.7.2...

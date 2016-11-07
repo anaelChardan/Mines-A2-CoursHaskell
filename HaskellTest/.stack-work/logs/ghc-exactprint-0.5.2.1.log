@@ -1,0 +1,60 @@
+Configuring ghc-exactprint-0.5.2.1...
+Building ghc-exactprint-0.5.2.1...
+Preprocessing library ghc-exactprint-0.5.2.1...
+[ 1 of 11] Compiling Language.Haskell.GHC.ExactPrint.GhcInterim ( src/Language/Haskell/GHC/ExactPrint/GhcInterim.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/GhcInterim.o )
+[ 2 of 11] Compiling Language.Haskell.GHC.ExactPrint.Types ( src/Language/Haskell/GHC/ExactPrint/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/Types.o )
+[ 3 of 11] Compiling Language.Haskell.GHC.ExactPrint.Lookup ( src/Language/Haskell/GHC/ExactPrint/Lookup.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/Lookup.o )
+[ 4 of 11] Compiling Language.Haskell.GHC.ExactPrint.Utils ( src/Language/Haskell/GHC/ExactPrint/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/Utils.o )
+[ 5 of 11] Compiling Language.Haskell.GHC.ExactPrint.Annotate ( src/Language/Haskell/GHC/ExactPrint/Annotate.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/Annotate.o )
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:1279:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:1300:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:1329:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:1330:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:1344:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:1399:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:1411:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:1690:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:1932:33: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:2518:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:2519:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:2799:11: warning: [-Wunused-matches]
+    Defined but not used: ‘l’
+
+src/Language/Haskell/GHC/ExactPrint/Annotate.hs:2857:42: warning: [-Wunused-matches]
+    Defined but not used: ‘mk’
+[ 6 of 11] Compiling Language.Haskell.GHC.ExactPrint.Preprocess ( src/Language/Haskell/GHC/ExactPrint/Preprocess.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/Preprocess.o )
+[ 7 of 11] Compiling Language.Haskell.GHC.ExactPrint.Print ( src/Language/Haskell/GHC/ExactPrint/Print.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/Print.o )
+[ 8 of 11] Compiling Language.Haskell.GHC.ExactPrint.Delta ( src/Language/Haskell/GHC/ExactPrint/Delta.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/Delta.o )
+
+src/Language/Haskell/GHC/ExactPrint/Delta.hs:382:23: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In a case alternative: Patterns not matched: (_:_:_)
+[ 9 of 11] Compiling Language.Haskell.GHC.ExactPrint.Parsers ( src/Language/Haskell/GHC/ExactPrint/Parsers.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/Parsers.o )
+[10 of 11] Compiling Language.Haskell.GHC.ExactPrint.Transform ( src/Language/Haskell/GHC/ExactPrint/Transform.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint/Transform.o )
+[11 of 11] Compiling Language.Haskell.GHC.ExactPrint ( src/Language/Haskell/GHC/ExactPrint.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Language/Haskell/GHC/ExactPrint.o )
+Installing library in
+/Users/Ananas/.stack/snapshots/x86_64-osx/lts-7.8/8.0.1/lib/x86_64-osx-ghc-8.0.1/ghc-exactprint-0.5.2.1-EpzMvHmjWrrLtg4NLAV8AT
+Registering ghc-exactprint-0.5.2.1...

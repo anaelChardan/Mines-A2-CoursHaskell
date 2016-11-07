@@ -1,0 +1,137 @@
+Configuring hspec-core-2.2.4...
+Building hspec-core-2.2.4...
+Preprocessing library hspec-core-2.2.4...
+[ 1 of 18] Compiling Paths_hspec_core ( .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_hspec_core.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Paths_hspec_core.o )
+[ 2 of 18] Compiling Test.Hspec.Timer ( src/Test/Hspec/Timer.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Timer.o )
+[ 3 of 18] Compiling Test.Hspec.Compat ( src/Test/Hspec/Compat.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Compat.o )
+[ 4 of 18] Compiling Test.Hspec.Core.Util ( src/Test/Hspec/Core/Util.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Util.o )
+[ 5 of 18] Compiling Test.Hspec.FailureReport ( src/Test/Hspec/FailureReport.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/FailureReport.o )
+[ 6 of 18] Compiling Test.Hspec.Core.QuickCheckUtil ( src/Test/Hspec/Core/QuickCheckUtil.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/QuickCheckUtil.o )
+[ 7 of 18] Compiling Test.Hspec.Core.Example ( src/Test/Hspec/Core/Example.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Example.o )
+[ 8 of 18] Compiling Test.Hspec.Core.Tree ( src/Test/Hspec/Core/Tree.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Tree.o )
+[ 9 of 18] Compiling Test.Hspec.Core.Spec.Monad ( src/Test/Hspec/Core/Spec/Monad.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Spec/Monad.o )
+[10 of 18] Compiling Test.Hspec.Core.Spec ( src/Test/Hspec/Core/Spec.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Spec.o )
+[11 of 18] Compiling Test.Hspec.Core.Hooks ( src/Test/Hspec/Core/Hooks.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Hooks.o )
+[12 of 18] Compiling Test.Hspec.Core.Formatters.Internal ( src/Test/Hspec/Core/Formatters/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Formatters/Internal.o )
+[13 of 18] Compiling Test.Hspec.Core.Formatters ( src/Test/Hspec/Core/Formatters.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Formatters.o )
+[14 of 18] Compiling Test.Hspec.Options ( src/Test/Hspec/Options.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Options.o )
+[15 of 18] Compiling Test.Hspec.Config ( src/Test/Hspec/Config.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Config.o )
+[16 of 18] Compiling Test.Hspec.Core.Runner.Eval ( src/Test/Hspec/Core/Runner/Eval.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Runner/Eval.o )
+[17 of 18] Compiling Test.Hspec.Core.Runner ( src/Test/Hspec/Core/Runner.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/Runner.o )
+[18 of 18] Compiling Test.Hspec.Core.QuickCheck ( src/Test/Hspec/Core/QuickCheck.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Test/Hspec/Core/QuickCheck.o )
+Running Haddock for hspec-core-2.2.4...
+Preprocessing library hspec-core-2.2.4...
+Haddock coverage:
+   0% (  0 /  8) in 'Paths_hspec_core'
+  Missing documentation for:
+    Module header
+    version (.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_hspec_core.hs:28)
+    getBinDir (.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_hspec_core.hs:38)
+    getLibDir (.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_hspec_core.hs:38)
+    getDataDir (.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_hspec_core.hs:38)
+    getLibexecDir (.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_hspec_core.hs:38)
+    getDataFileName (.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_hspec_core.hs:45)
+    getSysconfDir (.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/autogen/Paths_hspec_core.hs:38)
+   0% (  0 /  2) in 'Test.Hspec.Timer'
+  Missing documentation for:
+    Module header
+    newTimer (src/Test/Hspec/Timer.hs:6)
+  67% (  8 / 12) in 'Test.Hspec.Compat'
+  Missing documentation for:
+    Module header
+    getDefaultConcurrentJobs (src/Test/Hspec/Compat.hs:67)
+    showType (src/Test/Hspec/Compat.hs:112)
+    showFullType (src/Test/Hspec/Compat.hs:121)
+ 100% ( 12 / 12) in 'Test.Hspec.Core.Util'
+   0% (  0 /  4) in 'Test.Hspec.FailureReport'
+  Missing documentation for:
+    Module header
+    FailureReport (src/Test/Hspec/FailureReport.hs:16)
+    writeFailureReport (src/Test/Hspec/FailureReport.hs:24)
+    readFailureReport (src/Test/Hspec/FailureReport.hs:42)
+   0% (  0 /  7) in 'Test.Hspec.Core.QuickCheckUtil'
+  Missing documentation for:
+    Module header
+    aroundProperty (src/Test/Hspec/Core/QuickCheckUtil.hs:24)
+    aroundProp (src/Test/Hspec/Core/QuickCheckUtil.hs:31)
+    aroundRose (src/Test/Hspec/Core/QuickCheckUtil.hs:34)
+    formatNumbers (src/Test/Hspec/Core/QuickCheckUtil.hs:40)
+    newSeed (src/Test/Hspec/Core/QuickCheckUtil.hs:47)
+    mkGen (src/Test/Hspec/Core/QuickCheckUtil.hs:56)
+  50% (  5 / 10) in 'Test.Hspec.Core.Example'
+  Missing documentation for:
+    Module header
+    Params (src/Test/Hspec/Core/Example.hs:37)
+    defaultParams (src/Test/Hspec/Core/Example.hs:42)
+    Progress (src/Test/Hspec/Core/Example.hs:48)
+    ProgressCallback (src/Test/Hspec/Core/Example.hs:49)
+ 100% (  6 /  6) in 'Test.Hspec.Core.Tree'
+  36% (  4 / 11) in 'Test.Hspec.Core.Spec.Monad'
+  Missing documentation for:
+    Module header
+    Spec (src/Test/Hspec/Core/Spec/Monad.hs:25)
+    SpecWith (src/Test/Hspec/Core/Spec/Monad.hs:27)
+    mapSpecTree (src/Test/Hspec/Core/Spec/Monad.hs:52)
+    mapSpecItem (src/Test/Hspec/Core/Spec/Monad.hs:55)
+    mapSpecItem_ (src/Test/Hspec/Core/Spec/Monad.hs:63)
+    modifyParams (src/Test/Hspec/Core/Spec/Monad.hs:66)
+  71% ( 24 / 34) in 'Test.Hspec.Core.Spec'
+  Missing documentation for:
+    Spec (src/Test/Hspec/Core/Spec/Monad.hs:25)
+    SpecWith (src/Test/Hspec/Core/Spec/Monad.hs:27)
+    mapSpecTree (src/Test/Hspec/Core/Spec/Monad.hs:52)
+    mapSpecItem (src/Test/Hspec/Core/Spec/Monad.hs:55)
+    mapSpecItem_ (src/Test/Hspec/Core/Spec/Monad.hs:63)
+    modifyParams (src/Test/Hspec/Core/Spec/Monad.hs:66)
+    Params (src/Test/Hspec/Core/Example.hs:37)
+    defaultParams (src/Test/Hspec/Core/Example.hs:42)
+    Progress (src/Test/Hspec/Core/Example.hs:48)
+    ProgressCallback (src/Test/Hspec/Core/Example.hs:49)
+ 100% ( 13 / 13) in 'Test.Hspec.Core.Hooks'
+  81% ( 22 / 27) in 'Test.Hspec.Core.Formatters.Internal'
+  Missing documentation for:
+    Module header
+    Formatter (src/Test/Hspec/Core/Formatters/Internal.hs:139)
+    FormatM (src/Test/Hspec/Core/Formatters/Internal.hs:87)
+    FailureRecord (src/Test/Hspec/Core/Formatters/Internal.hs:133)
+    runFormatM (src/Test/Hspec/Core/Formatters/Internal.hs:90)
+  77% ( 24 / 31) in 'Test.Hspec.Core.Formatters'
+  Missing documentation for:
+    silent (src/Test/Hspec/Core/Formatters.hs:93)
+    specdoc (src/Test/Hspec/Core/Formatters.hs:107)
+    progress (src/Test/Hspec/Core/Formatters.hs:140)
+    failed_examples (src/Test/Hspec/Core/Formatters.hs:150)
+    Formatter (src/Test/Hspec/Core/Formatters/Internal.hs:139)
+    FormatM (src/Test/Hspec/Core/Formatters/Internal.hs:87)
+    FailureRecord (src/Test/Hspec/Core/Formatters/Internal.hs:133)
+   0% (  0 /  6) in 'Test.Hspec.Options'
+  Missing documentation for:
+    Module header
+    Config (src/Test/Hspec/Options.hs:21)
+    ColorMode (src/Test/Hspec/Options.hs:90)
+    defaultConfig (src/Test/Hspec/Options.hs:44)
+    filterOr (src/Test/Hspec/Options.hs:64)
+    parseOptions (src/Test/Hspec/Options.hs:189)
+  14% (  1 /  7) in 'Test.Hspec.Config'
+  Missing documentation for:
+    Module header
+    Config (src/Test/Hspec/Options.hs:21)
+    ColorMode (src/Test/Hspec/Options.hs:90)
+    defaultConfig (src/Test/Hspec/Options.hs:44)
+    getConfig (src/Test/Hspec/Config.hs:71)
+    configQuickCheckArgs (src/Test/Hspec/Config.hs:50)
+  50% (  1 /  2) in 'Test.Hspec.Core.Runner.Eval'
+  Missing documentation for:
+    Module header
+  77% ( 10 / 13) in 'Test.Hspec.Core.Runner'
+  Missing documentation for:
+    Config (src/Test/Hspec/Options.hs:21)
+    ColorMode (src/Test/Hspec/Options.hs:90)
+    defaultConfig (src/Test/Hspec/Options.hs:44)
+ 100% (  4 /  4) in 'Test.Hspec.Core.QuickCheck'
+Documentation created:
+.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/doc/html/hspec-core/index.html,
+.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/doc/html/hspec-core/hspec-core.txt
+Installing library in
+/Users/Ananas/.stack/snapshots/x86_64-osx/lts-7.8/8.0.1/lib/x86_64-osx-ghc-8.0.1/hspec-core-2.2.4-DeIo5pJi2jNEhr4KZ6VUIq
+Registering hspec-core-2.2.4...
